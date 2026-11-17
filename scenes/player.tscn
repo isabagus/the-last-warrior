@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ocxj15n0g5ba"]
 
 [ext_resource type="Texture2D" uid="uid://b7hikfn2bhy5s" path="res://assets/images/player/Player.png" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://bquwju50ptkyy" path="res://scripts/Player.cs" id="1_g2els"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
 atlas = ExtResource("1_3vyb7")
@@ -420,9 +421,10 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D" unique_id=1933145660]
+scale = Vector2(4, 4)
+script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=614129036]
-position = Vector2(498.5, 268.5)
-scale = Vector2(3.96875, 3.59375)
+scale = Vector2(1.104, 1)
 sprite_frames = SubResource("SpriteFrames_rw2yd")
 animation = &"dead"
