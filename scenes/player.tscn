@@ -422,7 +422,8 @@ animations = [{
 [node name="Player" type="CharacterBody2D" unique_id=1933145660]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=614129036]
-position = Vector2(498.5, 268.5)
-scale = Vector2(3.96875, 3.59375)
+position = Vector2(49.5, 38.5)
+scale = Vector2(4.09375, 3.40625)
 sprite_frames = SubResource("SpriteFrames_rw2yd")
 animation = &"dead"
+frame_progress = 0.67996716
