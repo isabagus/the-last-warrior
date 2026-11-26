@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://vhjqewh58joh"]
+
+[ext_resource type="Texture2D" uid="uid://ciqblfq4puhmh" path="res://assets/images/bg/stardew-valley-ranch-mode-screenshot-SOURCE-Nena-Farrell.webp" id="1_l6cm7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rw2yd"]
+texture = ExtResource("1_l6cm7")
+modulate_color = Color(0.2231029, 0.2231029, 0.22310287, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w6un0"]
+bg_color = Color(0.02176066, 0.45197266, 0.3720847, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="FontVariation" id="FontVariation_nm4q6"]
+
+[node name="Main Menu" type="Control" unique_id=2063283513]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=473898454]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -573.5
+offset_top = -321.5
+offset_right = 573.5
+offset_bottom = 321.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_rw2yd")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1281196065]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -201.25
+offset_top = -55.5
+offset_right = 201.25
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=886047541]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_w6un0")
+text = "START GAME"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1974947148]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_w6un0")
+text = "	SETTING"
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=949149600]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_w6un0")
+text = "EXIT"
+
+[node name="Label" type="Label" parent="." unique_id=1780304930]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.5
+offset_top = -171.0
+offset_right = 300.5
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("FontVariation_nm4q6")
+theme_override_font_sizes/font_size = 75
+text = "The Last Warrior"
