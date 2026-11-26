@@ -420,6 +420,8 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rw2yd"]
+
 [node name="Player" type="CharacterBody2D" unique_id=1933145660]
 scale = Vector2(4, 4)
 script = ExtResource("1_g2els")
@@ -427,4 +429,12 @@ script = ExtResource("1_g2els")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=614129036]
 scale = Vector2(1.104, 1)
 sprite_frames = SubResource("SpriteFrames_rw2yd")
-animation = &"walk_right"
+animation = &"attack_right"
+frame = 3
+frame_progress = 1.0
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=2137710246]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=891192367]
+position = Vector2(10, 0)
+shape = SubResource("RectangleShape2D_rw2yd")

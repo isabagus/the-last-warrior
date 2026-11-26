@@ -10,16 +10,25 @@ public partial class Player : CharacterBody2D
 
 	private bool _isAttack = false;
 
+	private Area2D _hitbox;
+	private CollisionShape2D _hitboxCollision;
+
 	public override void _Ready()
 	{
 		animatedSprite2D = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 
 		animatedSprite2D.AnimationFinished += OnAnimationFinished;
+
+		_hitbox = GetNode<Area2D>("Hitbox");
+		_hitboxCollision = GetNode<CollisionShape2D>("Hitbox/CollisionShape2D");
+		_hitboxCollision.Disabled = true; 
 	}
 	
 	private void OnAnimationFinished()
 	{
 		_isAttack = false;
+
+		_hitboxCollision.Disabled = true;
 	}
 
 	public override void _PhysicsProcess(double delta)
@@ -49,6 +58,9 @@ public partial class Player : CharacterBody2D
 	private void StartAttack()
 	{
 		_isAttack = true;
+
+		_hitboxCollision.Disabled = false;
+		_hitbox.Rotation = _lastDirection.Angle();
 
 		if(_lastDirection.X != 0)
 		{
